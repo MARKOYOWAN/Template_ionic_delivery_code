@@ -8,12 +8,20 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'mainscreen',
     pathMatch: 'full'
   },
   {
     path: 'mainscreen',
     loadChildren: () => import('./mainscreen/mainscreen.module').then( m => m.MainscreenPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   },
 ];
 
